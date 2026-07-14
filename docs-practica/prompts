@@ -1,0 +1,9 @@
+Prompts usados:
+Login: Diseña una interfaz de inicio de sesión moderna y minimalista para un sistema de control de inventarios. Debe incluir un logotipo corporativo en la parte superior, cajas de texto limpias para 'Usuario' y 'Contraseña', un botón estilizado para 'Iniciar Sesión' y un fondo sutil en tonos grises claros.
+Dashboard: Genera un panel de control principal (Dashboard) administrativo con un menú de navegación lateral izquierdo (Sidebar) que incluya íconos para: Inicio, Productos, Categorías, Clientes y Ventas. El espacio central debe mostrar bloques visuales con tarjetas de resumen para indicadores clave del negocio.
+Productos (Tabla CRUD): Crea una vista para la gestión de productos. Debe incluir una tabla interactiva con las columnas: ID, Nombre, Categoría, Precio, Stock y Acciones (Editar/Eliminar). En la parte superior, añade un botón destacado que diga 'Agregar Producto'.
+Formulario de Producto: Genera una ventana de formulario limpio para dar de alta nuevos productos. Necesito campos para rellenar el 'Nombre', 'Descripción', un menú desplegable (dropdown) para 'Categoría', el 'Precio' y el 'Stock inicial'.
+Categorías: Diseña una interfaz de gestión de categorías. Debe mostrar un listado estructurado en forma de tabla con columnas de ID y Nombre de categoría, acompañado de botones de acción rápida para Editar y Eliminar cada registro.
+Clientes: Crea un listado de clientes con una disposición de tabla limpia que contenga las columnas: ID, Nombre, Email y Teléfono. Asegúrate de mantener la misma barra lateral y el diseño visual consistente con el Dashboard.
+
+Ventas: Genera un registro histórico de ventas en formato de tabla. Columnas requeridas: ID Venta, Cliente, Fecha, Total y Estado (Pendiente/Completado). El estilo visual debe ser idéntico al del resto del sistema administrativo.

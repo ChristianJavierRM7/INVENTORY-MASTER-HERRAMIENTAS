@@ -237,7 +237,7 @@ export default function Productos() {
       {/* Modal / Formulario de Producto (CRUD Completo) */}
       {showForm && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-xl border border-outline-variant max-w-lg w-full overflow-hidden shadow-2xl animate-in fade-in zoom-in duration-150">
+          <div className="bg-white rounded-xl border border-outline-variant overflow-hidden shadow-2xl" style={{ width: '500px', maxWidth: '100%' }}>
             <header className="px-lg py-md border-b border-outline-variant flex justify-between items-center bg-surface-container-low">
               <h3 className="font-headline-sm text-headline-sm font-bold text-primary">
                 {editingProduct ? '📝 Editar Producto' : '➕ Agregar Producto'}

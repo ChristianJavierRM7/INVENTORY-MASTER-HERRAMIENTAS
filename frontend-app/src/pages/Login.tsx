@@ -23,7 +23,7 @@ export default function Login() {
             const response = await api.post('/auth/login', { email, password });
 
             // Guarda el token JWT de forma segura en el navegador
-            localStorage.setItem('token', response.data.token);
+            localStorage.setItem('token', response.data.accessToken);
 
             // Redirige automáticamente al panel de administración
             navigate('/admin');

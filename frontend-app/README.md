@@ -70,4 +70,17 @@ export default defineConfig([
     },
   },
 ])
+# Inventory Precision - Enterprise Suite v4.2.1
+
+## 🚀 Cómo correr el frontend y la infraestructura localmente
+
+### Prerrequisitos
+* Tener instalado **Docker** y **Docker Desktop**.
+
+### Instrucciones de Arranque
+1. Clona este repositorio en tu máquina.
+2. Abre una terminal en la raíz del proyecto.
+3. Ejecuta el siguiente comando para compilar e iniciar los tres servicios (DB, API, Frontend):
+   ```bash
+   docker compose up --build
 ```

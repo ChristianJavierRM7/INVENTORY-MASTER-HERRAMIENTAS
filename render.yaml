@@ -1,0 +1,55 @@
+services:
+  - type: web
+    name: backend-api
+    env: docker
+    dockerContext: herramientas-node-api
+    dockerfilePath: herramientas-node-api/Dockerfile
+    plan: free
+    envVars:
+      - key: PORT
+        value: 4005
+      - key: JWT_SECRET
+        generateValue: true
+      - key: DB_HOST
+        fromDatabase:
+          name: herramientas-db
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: herramientas-db
+          property: port
+      - key: DB_NAME
+        fromDatabase:
+          name: herramientas-db
+          property: database
+      - key: DB_USER
+        fromDatabase:
+          name: herramientas-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: herramientas-db
+          property: password
+
+  - type: web
+    name: frontend-app
+    env: docker
+    dockerContext: frontend-app
+    dockerfilePath: frontend-app/Dockerfile
+    plan: free
+    envVars:
+      - key: BACKEND_HOST
+        fromService:
+          name: backend-api
+          type: web
+          property: host
+      - key: BACKEND_PORT
+        fromService:
+          name: backend-api
+          type: web
+          property: port
+
+
+databases:
+  - name: herramientas-db
+    plan: free

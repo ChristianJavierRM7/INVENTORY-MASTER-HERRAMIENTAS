@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: '/api', // URL relativa obligatoria
+    baseURL: import.meta.env.DEV ? '/api' : 'https://backend-api-f3nq.onrender.com/api',
 });
 
 api.interceptors.request.use((config) => {
