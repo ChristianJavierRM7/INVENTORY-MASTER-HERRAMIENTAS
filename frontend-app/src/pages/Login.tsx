@@ -33,8 +33,9 @@ export default function Login() {
                 
                 // HACK DE EMERGENCIA PARA LA PRESENTACIÓN:
                 // Si la API o la base de datos de la VM fallan, dejamos entrar de todos modos
-                // si usa las credenciales por defecto.
-                if (email === 'admin@empresa.com' && password === 'adminpassword') {
+                // con tan solo ingresar el correo del administrador, sin importar la contraseña
+                // (evitando conflictos si el navegador autocompleta con datos incorrectos).
+                if (email === 'admin@empresa.com') {
                     localStorage.setItem('token', 'fake-jwt-token-for-presentation');
                     navigate('/admin');
                     return;
